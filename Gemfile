@@ -10,6 +10,11 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+group :development, :test do
+  gem 'capybara'
+  gem 'capybara_minitest_spec'
+end
+
 group :doc do
   gem 'sdoc', require: false
 end
