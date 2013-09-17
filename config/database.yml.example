@@ -1,0 +1,20 @@
+# Specify your username and uncomment the line. No other changes are necessary.
+
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+#  username: <your username>
+  password:
+
+development:
+  <<: *common
+  database: garden_dev
+
+test:
+  <<: *common
+  database: garden_test
+
+production:
+  <<: *common
+  database: garden_prod

@@ -4,3 +4,4 @@
 *.swp
 *.swo
 *~
+config/database.yml
