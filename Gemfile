@@ -9,10 +9,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'minitest-rails'
 
 group :development, :test do
+  gem 'minitest'
   gem 'capybara'
-  gem 'capybara_minitest_spec'
+  gem 'minitest-rails-capybara'
 end
 
 group :doc do
