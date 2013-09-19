@@ -1,4 +1,4 @@
-Rake::Task['test'].clear
+Rake::Task["test"].clear
 
 task :test do
   $LOAD_PATH.unshift('test')
