@@ -1,6 +1,7 @@
 GardenMate::Application.routes.draw do
   get 'auth/index'
   get '/signin', to: 'auth#signin'
+  get '/signup', to: 'users#create'
   root 'auth#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
