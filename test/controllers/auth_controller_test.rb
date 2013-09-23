@@ -1,13 +1,13 @@
 require "test_helper"
 
 class AuthControllerTest < ActionController::TestCase
-  test "should get index" do
+  def test_get_index
     get :index
     assert_response :success
   end
 
-  test "should get signin" do
-    get :signin
+  def test_post_signin
+    post :index
     assert_response :success
   end
 end
