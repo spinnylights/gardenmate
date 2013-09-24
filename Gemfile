@@ -10,6 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'minitest-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'minitest'
