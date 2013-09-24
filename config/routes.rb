@@ -1,4 +1,5 @@
 GardenMate::Application.routes.draw do
+  devise_for :users
   get 'auth/index'
   get '/signin', to: 'auth#signin'
   get '/signup', to: 'users#create'
