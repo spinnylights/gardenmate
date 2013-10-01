@@ -1,9 +1,13 @@
 GardenMate::Application.routes.draw do
-  devise_for :users
-  get 'auth/index'
-  get '/signin', to: 'auth#signin'
-  get '/signup', to: 'users#create'
-  root 'auth#index'
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_scope :user do
+    get '/console', to: 'users/sessions#console'
+    root 'users/sessions#new', as: 'unauth_user'
+  end
+
+  authenticated :user do
+    root 'users/sessions#console', as: 'auth_user'
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
